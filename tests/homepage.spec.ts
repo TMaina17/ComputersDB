@@ -6,11 +6,11 @@ test('test POM', async ({ page }) => {
     const homePage = new HomePage(page);
     const addComputerPageInstance = new addComputerPage(page);
     
-    await homePage.goto();
+    await homePage.goTo();
     await homePage.clickAddNewComputer();
     
     
-    await addComputerPageInstance.goto();
+    await addComputerPageInstance.goTo();
     await addComputerPageInstance.addNewComputer();
     
     await addComputerPageInstance.assertNewComputerAdded();
